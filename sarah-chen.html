@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah Chen | Partner | Meston Law LLP</title>
+    <meta name="description" content="Sarah Chen is a Partner at Meston Law LLP, specializing in international arbitration with 22 years of experience in complex cross-border disputes.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'meston-navy': '#0a1628',
+                        'meston-deep': '#0d1f3c',
+                        'meston-blue': '#1a3a5c',
+                        'meston-gold': '#c9a96e',
+                        'meston-gold-light': '#d4b87a',
+                        'meston-cream': '#f5f0e8',
+                        'meston-gray': '#8a9199',
+                        'meston-light': '#e8e4dc'
+                    },
+                    fontFamily: {
+                        'serif': ['Cormorant Garamond', 'Georgia', 'serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background: linear-gradient(135deg, #0a1628 0%, #0d1f3c 40%, #1a3a5c 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect fill="none" stroke="%23c9a96e" stroke-width="0.2" opacity="0.15" x="0" y="0" width="100" height="100"/><line x1="0" y1="0" x2="100" y2="100" stroke="%23c9a96e" stroke-width="0.1" opacity="0.1"/><line x1="100" y1="0" x2="0" y2="100" stroke="%23c9a96e" stroke-width="0.1" opacity="0.1"/></svg>');
+            background-size: 60px 60px;
+            opacity: 0.3;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #c9a96e;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #c9a96e, #b8945f);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(201,169,110,0.3);
+        }
+        .btn-outline {
+            border: 1px solid rgba(201,169,110,0.4);
+            transition: all 0.3s ease;
+        }
+        .btn-outline:hover {
+            background: rgba(201,169,110,0.1);
+            border-color: #c9a96e;
+        }
+        .divider-gold {
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, #c9a96e, #d4b87a);
+        }
+        .stat-number {
+            background: linear-gradient(135deg, #c9a96e, #d4b87a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: linear-gradient(to bottom, #c9a96e, transparent);
+        }
+        .timeline-dot {
+            width: 12px;
+            height: 12px;
+            background: #c9a96e;
+            border: 3px solid #0a1628;
+            border-radius: 50%;
+            position: absolute;
+            left: 18px;
+            top: 6px;
+        }
+        .publication-card {
+            transition: all 0.3s ease;
+            border: 1px solid rgba(201,169,110,0.1);
+        }
+        .publication-card:hover {
+            border-color: rgba(201,169,110,0.3);
+            transform: translateX(4px);
+        }
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .fade-in-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a1628;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1a3a5c;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #c9a96e;
+        }
+    </style>
+</head>
+<body class="font-sans text-meston-light bg-meston-navy antialiased">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-24">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-10 h-10 border border-meston-gold/40 flex items-center justify-center">
+                        <span class="font-serif text-meston-gold text-xl font-bold">M</span>
+                    </div>
+                    <div class="hidden sm:block">
+                        <span class="font-serif text-xl text-white tracking-wide">Meston Law</span>
+                        <span class="text-meston-gold text-xs tracking-widest block -mt-1">LLP</span>
+                    </div>
+                </a>
+                <div class="hidden lg:flex items-center space-x-10">
+                    <a href="index.html#about" class="nav-link text-sm tracking-widest uppercase text-meston-light/80 hover:text-white transition-colors">About</a>
+                    <a href="index.html#practice" class="nav-link text-sm tracking-widest uppercase text-meston-light/80 hover:text-white transition-colors">Practice Areas</a>
+                    <a href="index.html#attorneys" class="nav-link text-sm tracking-widest uppercase text-meston-light/80 hover:text-white transition-colors">Attorneys</a>
+                    <a href="index.html#global" class="nav-link text-sm tracking-widest uppercase text-meston-light/80 hover:text-white transition-colors">Global</a>
+                    <a href="index.html#insights" class="nav-link text-sm tracking-widest uppercase text-meston-light/80 hover:text-white transition-colors">Insights</a>
+                    <a href="index.html#contact" class="btn-primary px-8 py-3 text-sm tracking-widest uppercase text-meston-navy font-medium">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden text-white p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-full h-full bg-meston-navy z-50 lg:hidden">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-12">
+                    <span class="font-serif text-xl text-white">Meston Law</span>
+                    <button id="mobile-menu-close" class="text-white p-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-col space-y-8">
+                    <a href="index.html#about" class="text-2xl font-serif text-white mobile-link">About</a>
+                    <a href="index.html#practice" class="text-2xl font-serif text-white mobile-link">Practice Areas</a>
+                    <a href="index.html#attorneys" class="text-2xl font-serif text-white mobile-link">Attorneys</a>
+                    <a href="index.html#global" class="text-2xl font-serif text-white mobile-link">Global Presence</a>
+                    <a href="index.html#insights" class="text-2xl font-serif text-white mobile-link">Insights</a>
+                    <a href="index.html#contact" class="text-2xl font-serif text-meston-gold mobile-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Hero -->
+    <section class="hero-bg min-h-[70vh] flex items-end relative pt-32 pb-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid lg:grid-cols-12 gap-12 items-end">
+                <div class="lg:col-span-4">
+                    <div class="relative">
+                        <div class="absolute -inset-2 bg-gradient-to-br from-meston-gold/20 to-transparent rounded-lg"></div>
+                        <img 
+                            src="imgs/3.jpg" 
+                            alt="Sarah Chen" 
+                            class="relative rounded-lg shadow-2xl w-full object-cover h-[500px]"
+                        >
+                    </div>
+                </div>
+                <div class="lg:col-span-8">
+                    <p class="text-meston-gold text-sm tracking-[0.3em] uppercase mb-4 font-medium">Partner</p>
+                    <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl text-white leading-[1.1] mb-6">
+                        Sarah<br>Chen
+                    </h1>
+                    <p class="text-meston-gray text-xl leading-relaxed max-w-2xl mb-8">
+                        International Arbitration • Dispute Resolution • Singapore
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="mailto:s.chen@mestonlaw.com" class="btn-outline px-8 py-3 text-sm tracking-widest uppercase text-meston-gold inline-flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            Email
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="bg-meston-deep border-y border-meston-gold/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="fade-in-section">
+                    <p class="stat-number font-serif text-4xl md:text-5xl mb-2">22</p>
+                    <p class="text-meston-gray text-sm tracking-widest uppercase">Years in Practice</p>
+                </div>
+                <div class="fade-in-section">
+                    <p class="stat-number font-serif text-4xl md:text-5xl mb-2">$8B+</p>
+                    <p class="text-meston-gray text-sm tracking-widest uppercase">Dispute Value Handled</p>
+                </div>
+                <div class="fade-in-section">
+                    <p class="stat-number font-serif text-4xl md:text-5xl mb-2">45</p>
+                    <p class="text-meston-gray text-sm tracking-widest uppercase">Arbitrations Led</p>
+                </div>
+                <div class="fade-in-section">
+                    <p class="stat-number font-serif text-4xl md:text-5xl mb-2">6</p>
+                    <p class="text-meston-gray text-sm tracking-widest uppercase">Jurisdictions Admitted</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Biography -->
+    <section class="py-24 lg:py-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-16">
+                <div class="lg:col-span-8 fade-in-section">
+                    <div class="divider-gold mb-8"></div>
+                    <h2 class="font-serif text-4xl md:text-5xl text-white mb-8">Biography</h2>
+
+                    <div class="prose prose-lg max-w-none">
+                        <p class="text-meston-gray text-lg leading-relaxed mb-6">
+                            Sarah Chen is a Partner in Meston Law LLP's International Arbitration practice and co-head of the firm's Singapore office. With more than two decades of experience, she has established herself as one of Asia's leading arbitration counsel, particularly in energy, infrastructure, and investment treaty disputes.
+                        </p>
+                        <p class="text-meston-gray leading-relaxed mb-6">
+                            Sarah's practice spans ICC, LCIA, UNCITRAL, SIAC, and ad hoc arbitrations, with extensive experience in seat selection strategy, regulatory coordination across multiple Asian jurisdictions, and enforcement proceedings. She has represented governments, multilateral development banks, and multinational corporations in disputes involving billions of dollars across energy infrastructure, telecommunications, and international investment matters.
+                        </p>
+                        <p class="text-meston-gray leading-relaxed mb-6">
+                            She joined Meston Law in 2018 from a leading Singapore-based international practice where she was counsel and later senior counsel. Her appointment to co-lead the Singapore office reflected the firm's commitment to deepening its arbitration presence throughout Asia-Pacific.
+                        </p>
+                        <p class="text-meston-gray leading-relaxed mb-6">
+                            Sarah is admitted to practice in Singapore, Hong Kong, and England and Wales. She has served as president of the Singapore International Arbitration Centre User Council and is a frequent speaker at international arbitration conferences and seminars. She is a Fellow of the Chartered Institute of Arbitrators and sits on the panels of the SIAC, LCIA, and UNCITRAL.
+                        </p>
+                        <p class="text-meston-gray leading-relaxed">
+                            She holds an LLB from the National University of Singapore and an LLM in International Business Law from the University of London. She is fluent in English, Mandarin Chinese, and Cantonese.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-4 fade-in-section">
+                    <div class="sticky top-32">
+                        <div class="bg-meston-deep p-8 rounded-lg border border-meston-gold/10 mb-6">
+                            <h3 class="font-serif text-xl text-white mb-6">Credentials</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 text-meston-gold mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                                    </svg>
+                                    <div>
+                                        <p class="text-white text-sm font-medium">Education</p>
+                                        <p class="text-meston-gray text-sm">LLB, National University of Singapore</p>
+                                        <p class="text-meston-gray text-sm">LLM, University of London</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 text-meston-gold mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                                    </svg>
+                                    <div>
+                                        <p class="text-white text-sm font-medium">Admissions</p>
+                                        <p class="text-meston-gray text-sm">Singapore • Hong Kong</p>
+                                        <p class="text-meston-gray text-sm">England & Wales</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 text-meston-gold mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                    <div>
+                                        <p class="text-white text-sm font-medium">Languages</p>
+                                        <p class="text-meston-gray text-sm">English (Native)</p>
+                                        <p class="text-meston-gray text-sm">Mandarin (Native) • Cantonese (Fluent)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-meston-deep p-8 rounded-lg border border-meston-gold/10">
+                            <h3 class="font-serif text-xl text-white mb-6">Recognition</h3>
+                            <div class="space-y-3">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-2 h-2 bg-meston-gold rounded-full"></div>
+                                    <p class="text-meston-gray text-sm">Chambers Asia, Band 1 — International Arbitration</p>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-2 h-2 bg-meston-gold rounded-full"></div>
+                                    <p class="text-meston-gray text-sm">Asian Legal Business, Leading Arbitration Counsel</p>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-2 h-2 bg-meston-gold rounded-full"></div>
+                                    <p class="text-meston-gray text-sm">IFLR1000, Tier 1 — International Arbitration</p>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-2 h-2 bg-meston-gold rounded-full"></div>
+                                    <p class="text-meston-gray text-sm">Who's Who Legal, Arbitration Expert</p>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-2 h-2 bg-meston-gold rounded-full"></div>
+                                    <p class="text-meston-gray text-sm">Fellow, Chartered Institute of Arbitrators</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="py-24 lg:py-32 bg-meston-deep relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <defs>
+                    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#c9a96e" stroke-width="0.5"/>
+                    </pattern>
+                </defs>
+                <rect width="100" height="100" fill="url(#grid)"/>
+            </svg>
+        </div>
+        <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10 fade-in-section">
+            <div class="divider-gold mx-auto mb-8"></div>
+            <h2 class="font-serif text-4xl md:text-5xl text-white mb-6">Engage Counsel</h2>
+            <p class="text-meston-gray text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
+                To discuss an arbitration matter or dispute resolution strategy with Sarah, please reach out directly 
+                or complete an inquiry through our contact page.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="mailto:s.chen@mestonlaw.com" class="btn-primary px-10 py-4 text-sm tracking-widest uppercase text-meston-navy font-medium inline-flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                    Email Sarah Directly
+                </a>
+                <a href="index.html#contact" class="btn-outline px-10 py-4 text-sm tracking-widest uppercase text-meston-gold inline-flex items-center gap-2">
+                    General Inquiry
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-meston-navy border-t border-meston-gold/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 border border-meston-gold/40 flex items-center justify-center">
+                            <span class="font-serif text-meston-gold text-xl font-bold">M</span>
+                        </div>
+                        <div>
+                            <span class="font-serif text-xl text-white tracking-wide">Meston Law</span>
+                            <span class="text-meston-gold text-xs tracking-widest block -mt-1">LLP</span>
+                        </div>
+                    </div>
+                    <p class="text-meston-gray text-sm leading-relaxed">
+                        A boutique multinational law firm delivering exceptional counsel across borders since 1989.
+                    </p>
+                </div>
+                <div>
+                    <p class="text-white text-sm tracking-widest uppercase mb-6">Practice Areas</p>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-meston-gray text-sm hover:text-meston-gold transition-colors">Corporate & M&A</a></li>
+                        <li><a href="#" class="text-meston-gray text-sm hover:text-meston-gold transition-colors">International Arbitration</a></li>
+                        <li><a href="#" class="text-meston-gray text-sm hover:text-meston-gold transition-colors">Banking & Finance</a></li>
+                        <li><a href="#" class="text-meston-gray text-sm hover:text-meston-gold transition-colors">Regulatory & Compliance</a></li>
+                        <li><a href="#" class="text-meston-gray text-sm hover:text-meston-gold transition-colors">Private Equity</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="text-white text-sm tracking-widest uppercase mb-6">Offices</p>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-meston-gray text-sm hover:text-meston-gold transition-colors">London</a></li>
+                        <li><a href="#" class="text-meston-gray text-sm hover:text-meston-gold transition-colors">New York</a></li>
+                        <li><a href="#" class="text-meston-gray text-sm hover:text-meston-gold transition-colors">Singapore</a></li>
+                        <li><a href="#" class="text-meston-gray text-sm hover:text-meston-gold transition-colors">Dubai</a></li>
+                        <li><a href="#" class="text-meston-gray text-sm hover:text-meston-gold transition-colors">Hong Kong</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="text-white text-sm tracking-widest uppercase mb-6">Connect</p>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-meston-gray text-sm hover:text-meston-gold transition-colors">LinkedIn</a></li>
+                        <li><a href="#" class="text-meston-gray text-sm hover:text-meston-gold transition-colors">Twitter</a></li>
+                        <li><a href="#" class="text-meston-gray text-sm hover:text-meston-gold transition-colors">Careers</a></li>
+                        <li><a href="#" class="text-meston-gray text-sm hover:text-meston-gold transition-colors">News & Insights</a></li>
+                        <li><a href="#" class="text-meston-gray text-sm hover:text-meston-gold transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-meston-gold/10 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-meston-gray text-xs">
+                    © 2026 Meston Law LLP. All rights reserved. Attorney advertising.
+                </p>
+                <div class="flex gap-6">
+                    <a href="#" class="text-meston-gray text-xs hover:text-meston-gold transition-colors">Terms of Use</a>
+                    <a href="#" class="text-meston-gray text-xs hover:text-meston-gold transition-colors">Cookie Policy</a>
+                    <a href="#" class="text-meston-gray text-xs hover:text-meston-gold transition-colors">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-meston-navy/95', 'backdrop-blur-md', 'shadow-lg');
+            } else {
+                navbar.classList.remove('bg-meston-navy/95', 'backdrop-blur-md', 'shadow-lg');
+            }
+        });
+
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        mobileMenuClose.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { root: null, rootMargin: '0px', threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
