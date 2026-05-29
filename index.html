@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meston Law LLP | Multinational Law Firm</title>
-    <meta name="description" content="Meston Law LLP is a distinguished multinational law firm delivering exceptional counsel across borders in corporate, litigation, finance, international arbitration, and Trust & Estates.">
+    <title>Morag Law Group LLP | Multinational Law Firm</title>
+    <meta name="description" content="Morag Law Group LLP is a distinguished multinational law firm delivering exceptional counsel across borders in corporate, litigation, finance, international arbitration, and Trust & Estates.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -92,6 +92,7 @@
         .practice-card {
             transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
             border: 1px solid rgba(201,169,110,0.1);
+            will-change: transform, box-shadow;
         }
         .practice-card:hover {
             transform: translateY(-8px);
@@ -101,10 +102,44 @@
 
         .attorney-img {
             filter: grayscale(100%);
-            transition: filter 0.5s ease;
+            transition: filter 0.5s ease, transform 0.5s ease;
         }
         .attorney-card:hover .attorney-img {
             filter: grayscale(0%);
+            transform: scale(1.02);
+        }
+
+        .micro-float {
+            animation: float 12s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); }
+            50% { transform: translateY(-8px) translateX(4px); }
+        }
+        .image-hover-transform {
+            transition: transform 0.6s ease, filter 0.6s ease;
+        }
+        .image-hover-transform:hover {
+            transform: translateY(-6px) scale(1.02);
+        }
+        .section-glow:hover .glow-overlay {
+            opacity: 1;
+        }
+        .glow-overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle, rgba(201,169,110,0.14) 0%, transparent 72%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+            border-radius: 1rem;
+        }
+        .pulse-soft {
+            animation: pulse-soft 8s ease-in-out infinite;
+        }
+        @keyframes pulse-soft {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
         }
 
         .stat-number {
@@ -229,7 +264,7 @@
                         <span class="font-serif text-meston-gold text-xl font-bold">M</span>
                     </div>
                     <div class="hidden sm:block">
-                        <span class="font-serif text-xl text-white tracking-wide">Meston Law</span>
+                        <span class="font-serif text-xl text-white tracking-wide">Morag Law Group</span>
                         <span class="text-meston-gold text-xs tracking-widest block -mt-1">LLP</span>
                     </div>
                 </a>
@@ -257,7 +292,7 @@
         <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-full h-full bg-meston-navy z-50 lg:hidden">
             <div class="p-6">
                 <div class="flex justify-between items-center mb-12">
-                    <span class="font-serif text-xl text-white">Meston Law</span>
+                    <span class="font-serif text-xl text-white">Morag Law Group</span>
                     <button id="mobile-menu-close" class="text-white p-2">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/>
@@ -292,7 +327,7 @@
                     </h1>
                     <div class="text-reveal delay-300">
                         <p class="text-meston-gray text-lg md:text-xl leading-relaxed max-w-lg mb-10 font-light">
-                            Meston Law LLP delivers exceptional legal counsel across jurisdictions, 
+                            Morag Law Group LLP delivers exceptional legal counsel across jurisdictions, 
                             combining boutique precision with multinational reach in complex corporate, 
                             financial, and disputes matters.
                         </p>
@@ -307,12 +342,13 @@
                     </div>
                 </div>
                 <div class="text-reveal delay-500 hidden lg:block">
-                    <div class="relative">
+                    <div class="relative micro-float section-glow">
+                        <div class="glow-overlay rounded-lg"></div>
                         <div class="absolute -inset-4 bg-gradient-to-br from-meston-gold/10 to-transparent rounded-lg"></div>
                         <img 
                             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=1000&fit=crop&q=80" 
                             alt="Modern architecture representing global legal presence" 
-                            class="relative rounded-lg shadow-2xl w-full object-cover h-[600px]"
+                            class="relative rounded-lg shadow-2xl w-full object-cover h-[600px] image-hover-transform"
                         >
                         <div class="absolute bottom-8 left-8 right-8 glass-panel p-6 rounded-lg">
                             <div class="flex items-center justify-between">
@@ -377,7 +413,7 @@
                         <span class="italic text-meston-gold-light">Meets</span> Global Reach
                     </h2>
                     <p class="text-meston-gray text-lg leading-relaxed mb-8">
-                        Founded in 1989, Meston Law LLP has built its reputation on principled advocacy: 
+                        Founded in 1989, Morag Law Group LLP has built its reputation on principled advocacy: 
                         complex legal challenges spanning continents demand both deep expertise and true independence. 
                         Our partners maintain full decision-making authority and align exclusively with clients 
                         whose values and ambitions reflect our own commitment to excellence.
@@ -442,7 +478,7 @@
                 <div class="divider-gold mx-auto mb-8"></div>
                 <h2 class="font-serif text-4xl md:text-5xl text-white mb-6">Practice Areas</h2>
                 <p class="text-meston-gray text-lg max-w-2xl mx-auto">
-                    We concentrate our expertise where complexity, scale, and cross-border dimension converge.
+                    Our core practice areas reflect the leadership of our partner team: cross-border M&A and restructuring, international arbitration, banking and finance, and regulatory & compliance counsel built for multinational complexity.
                 </p>
             </div>
 
@@ -455,8 +491,7 @@
                     </div>
                     <h3 class="font-serif text-2xl text-white mb-3">Corporate & M&A</h3>
                     <p class="text-meston-gray text-sm leading-relaxed mb-6">
-                        Complex cross-border mergers, acquisitions, and corporate restructurings requiring 
-                        nuanced regulatory navigation across multiple jurisdictions.
+                        Led by Christian Graville and our transaction team, we advise on high-value cross-border mergers, acquisitions, and strategic restructurings with partner-level judgment in every jurisdiction.
                     </p>
                     <a href="#" class="text-meston-gold text-xs tracking-widest uppercase hover:text-white transition-colors inline-flex items-center gap-2">
                         Learn More
@@ -474,8 +509,7 @@
                     </div>
                     <h3 class="font-serif text-2xl text-white mb-3">International Arbitration</h3>
                     <p class="text-meston-gray text-sm leading-relaxed mb-6">
-                        Representation in ICC, LCIA, ICSID, and ad hoc arbitrations. Deep expertise in 
-                        energy, infrastructure, and investment treaty disputes.
+                        Our disputes practice delivers award-winning advocacy in ICC, LCIA, ICSID, and ad hoc proceedings, with particular strength in energy, infrastructure, and investor-state claims.
                     </p>
                     <a href="#" class="text-meston-gold text-xs tracking-widest uppercase hover:text-white transition-colors inline-flex items-center gap-2">
                         Learn More
@@ -493,8 +527,7 @@
                     </div>
                     <h3 class="font-serif text-2xl text-white mb-3">Banking & Finance</h3>
                     <p class="text-meston-gray text-sm leading-relaxed mb-6">
-                        Syndicated lending, project finance, and structured products. Counsel to leading 
-                        financial institutions on regulatory and transactional matters.
+                        Trusted by sponsors and lenders on syndicated lending, project finance, and structured credit across the Americas and Asia.
                     </p>
                     <a href="#" class="text-meston-gold text-xs tracking-widest uppercase hover:text-white transition-colors inline-flex items-center gap-2">
                         Learn More
@@ -512,8 +545,7 @@
                     </div>
                     <h3 class="font-serif text-2xl text-white mb-3">Regulatory & Compliance</h3>
                     <p class="text-meston-gray text-sm leading-relaxed mb-6">
-                        Multi-jurisdictional regulatory advice, internal investigations, and compliance 
-                        program design for financial services and multinational corporations.
+                        Guidance on EU, UK, US, and APAC regulatory regimes, internal investigations, and compliance programs anchored by our Madrid office.
                     </p>
                     <a href="#" class="text-meston-gold text-xs tracking-widest uppercase hover:text-white transition-colors inline-flex items-center gap-2">
                         Learn More
@@ -589,7 +621,7 @@
                     <div class="relative overflow-hidden rounded-lg mb-6">
                         <img 
                             src="imgs/2.png" 
-                            alt="Andy Beathen" 
+                            alt="Andy Graville" 
                             class="attorney-img w-full h-80 object-cover"
                         >
                         <div class="absolute inset-0 bg-gradient-to-t from-meston-navy/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -597,7 +629,7 @@
                             <p class="text-meston-gold text-xs tracking-widest uppercase mb-2">View Profile →</p>
                         </div>
                     </div>
-                    <h3 class="font-serif text-xl text-white mb-1 group-hover:text-meston-gold transition-colors">Andrew F. Beathan</h3>
+                    <h3 class="font-serif text-xl text-white mb-1 group-hover:text-meston-gold transition-colors">Christian L. Graville</h3>
                     <p class="text-meston-gold text-sm tracking-wider uppercase mb-2">Managing Partner</p>
                     <p class="text-meston-gray text-sm">Corporate & M&A • London</p>
                 </a>
@@ -678,7 +710,7 @@
                         <span class="italic text-meston-gold-light">Local</span> Insight
                     </h2>
                     <p class="text-meston-gray text-lg leading-relaxed mb-10">
-                        With offices in strategic financial and legal centers, Meston Law LLP combines 
+                        With offices in strategic financial and legal centers, Morag Law Group LLP combines 
                         the responsiveness of a boutique practice with the geographic coverage of a 
                         global firm. Our attorneys are admitted to practice in fourteen jurisdictions 
                         and fluent in the regulatory nuances that determine success.
@@ -716,11 +748,12 @@
                 </div>
 
                 <div class="fade-in-section">
-                    <div class="relative">
+                    <div class="relative micro-float section-glow">
+                        <div class="glow-overlay rounded-lg"></div>
                         <img 
                             src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop&q=80" 
                             alt="Global connectivity" 
-                            class="rounded-lg shadow-2xl w-full object-cover h-[500px]"
+                            class="rounded-lg shadow-2xl w-full object-cover h-[500px] image-hover-transform"
                         >
                         <div class="absolute inset-0 bg-gradient-to-tr from-meston-navy/60 via-transparent to-transparent rounded-lg"></div>
 
@@ -761,7 +794,7 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="testimonial-card bg-meston-deep p-10 rounded-lg border border-meston-gold/10 fade-in-section">
                     <p class="text-meston-light/90 text-lg leading-relaxed mb-8 font-light italic">
-                        "Meston Law navigated a twelve-jurisdiction restructuring with a precision that 
+                        "Morag Law Group navigated a twelve-jurisdiction restructuring with a precision that 
                         saved our transaction. Their ability to anticipate regulatory friction before it 
                         materialized was extraordinary."
                     </p>
@@ -955,7 +988,7 @@
                             </div>
                             <div>
                                 <p class="text-white font-medium mb-1">General Inquiries</p>
-                                <p class="text-meston-gray text-sm">inquiries@mestonlaw.com</p>
+                                <p class="text-meston-gray text-sm">inquiries@moraglawgroup.com</p>
                             </div>
                         </div>
 
@@ -1010,7 +1043,7 @@
                             <label class="block text-meston-gray text-xs tracking-widest uppercase mb-3">Message</label>
                             <textarea name="message" rows="4" class="w-full bg-meston-navy border border-meston-gold/20 rounded px-4 py-3 text-white focus:border-meston-gold focus:outline-none transition-colors resize-none" placeholder="Please describe your matter briefly..." required></textarea>
                         </div>
-                        <input type="hidden" name="_subject" value="New Meston Law LLP Inquiry">
+                        <input type="hidden" name="_subject" value="New Morag Law Group LLP Inquiry">
                         <input type="text" name="_gotcha" style="display:none">
                         <button type="submit" class="w-full btn-primary py-4 text-sm tracking-widest uppercase text-meston-navy font-medium rounded" id="submit-btn">
                             Submit Inquiry
@@ -1038,7 +1071,7 @@
                             <span class="font-serif text-meston-gold text-xl font-bold">M</span>
                         </div>
                         <div>
-                            <span class="font-serif text-xl text-white tracking-wide">Meston Law</span>
+                            <span class="font-serif text-xl text-white tracking-wide">Morag Law Group</span>
                             <span class="text-meston-gold text-xs tracking-widest block -mt-1">LLP</span>
                         </div>
                     </div>
@@ -1084,7 +1117,7 @@
 
             <div class="pt-8 border-t border-meston-gold/10 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p class="text-meston-gray text-xs">
-                    © 2026 Meston Law LLP. All rights reserved. Attorney advertising.
+                    © 2026 Morag Law Group LLP. All rights reserved. Attorney advertising.
                 </p>
                 <div class="flex gap-6">
                     <a href="#" class="text-meston-gray text-xs hover:text-meston-gold transition-colors">Terms of Use</a>
@@ -1210,5 +1243,6 @@
         });
     }
     </script>
+    <script src="imgs/main.js"></script>
 </body>
 </html>

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarah Chen | Partner | Meston Law LLP</title>
-    <meta name="description" content="Sarah Chen is a Partner at Meston Law LLP, specializing in international arbitration with 22 years of experience in complex cross-border disputes.">
+    <title>Sarah Chen | Partner | Morag Law Group LLP</title>
+    <meta name="description" content="Sarah Chen is a Partner at Morag Law Group LLP, specializing in international arbitration with 22 years of experience in complex cross-border disputes.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -114,6 +114,38 @@
             border-color: rgba(201,169,110,0.3);
             transform: translateX(4px);
         }
+        .micro-float {
+            animation: float 12s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        .image-hover-transform {
+            transition: transform 0.6s ease, filter 0.6s ease;
+        }
+        .image-hover-transform:hover {
+            transform: translateY(-5px) scale(1.02);
+        }
+        .section-glow:hover .glow-overlay {
+            opacity: 1;
+        }
+        .glow-overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle, rgba(201,169,110,0.14) 0%, transparent 72%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+            border-radius: 1rem;
+        }
+        .pulse-soft {
+            animation: pulse-soft 8s ease-in-out infinite;
+        }
+        @keyframes pulse-soft {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
         .mobile-menu {
             transform: translateX(100%);
             transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
@@ -156,7 +188,7 @@
                         <span class="font-serif text-meston-gold text-xl font-bold">M</span>
                     </div>
                     <div class="hidden sm:block">
-                        <span class="font-serif text-xl text-white tracking-wide">Meston Law</span>
+                        <span class="font-serif text-xl text-white tracking-wide">Morag Law Group</span>
                         <span class="text-meston-gold text-xs tracking-widest block -mt-1">LLP</span>
                     </div>
                 </a>
@@ -178,7 +210,7 @@
         <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-full h-full bg-meston-navy z-50 lg:hidden">
             <div class="p-6">
                 <div class="flex justify-between items-center mb-12">
-                    <span class="font-serif text-xl text-white">Meston Law</span>
+                    <span class="font-serif text-xl text-white">Morag Law Group</span>
                     <button id="mobile-menu-close" class="text-white p-2">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/>
@@ -202,12 +234,13 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full">
             <div class="grid lg:grid-cols-12 gap-12 items-end">
                 <div class="lg:col-span-4">
-                    <div class="relative">
+                    <div class="relative micro-float section-glow">
+                        <div class="glow-overlay rounded-lg"></div>
                         <div class="absolute -inset-2 bg-gradient-to-br from-meston-gold/20 to-transparent rounded-lg"></div>
                         <img 
-                            src="imgs/3.jpg" 
+                            src="imgs/3.png" 
                             alt="Sarah Chen" 
-                            class="relative rounded-lg shadow-2xl w-full object-cover h-[500px]"
+                            class="relative rounded-lg shadow-2xl w-full object-cover h-[500px] image-hover-transform"
                         >
                     </div>
                 </div>
@@ -219,8 +252,11 @@
                     <p class="text-meston-gray text-xl leading-relaxed max-w-2xl mb-8">
                         International Arbitration • Dispute Resolution • Singapore
                     </p>
+                    <p class="text-meston-gray text-lg leading-relaxed max-w-2xl mb-8">
+                        Sarah's arbitration leadership turns global disputes into strategic outcomes for clients in energy, infrastructure, and investment treaty matters.
+                    </p>
                     <div class="flex flex-wrap gap-4">
-                        <a href="mailto:s.chen@mestonlaw.com" class="btn-outline px-8 py-3 text-sm tracking-widest uppercase text-meston-gold inline-flex items-center gap-2">
+                        <a href="mailto:s.chen@moraglawgroup.com" class="btn-outline px-8 py-3 text-sm tracking-widest uppercase text-meston-gold inline-flex items-center gap-2">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                             </svg>
@@ -267,13 +303,13 @@
 
                     <div class="prose prose-lg max-w-none">
                         <p class="text-meston-gray text-lg leading-relaxed mb-6">
-                            Sarah Chen is a Partner in Meston Law LLP's International Arbitration practice and co-head of the firm's Singapore office. With more than two decades of experience, she has established herself as one of Asia's leading arbitration counsel, particularly in energy, infrastructure, and investment treaty disputes.
+                            Sarah Chen is a Partner in Morag Law Group LLP's International Arbitration practice and co-head of the firm's Singapore office. With more than two decades of experience, she has established herself as one of Asia's leading arbitration counsel, particularly in energy, infrastructure, and investment treaty disputes.
                         </p>
                         <p class="text-meston-gray leading-relaxed mb-6">
                             Sarah's practice spans ICC, LCIA, UNCITRAL, SIAC, and ad hoc arbitrations, with extensive experience in seat selection strategy, regulatory coordination across multiple Asian jurisdictions, and enforcement proceedings. She has represented governments, multilateral development banks, and multinational corporations in disputes involving billions of dollars across energy infrastructure, telecommunications, and international investment matters.
                         </p>
                         <p class="text-meston-gray leading-relaxed mb-6">
-                            She joined Meston Law in 2018 from a leading Singapore-based international practice where she was counsel and later senior counsel. Her appointment to co-lead the Singapore office reflected the firm's commitment to deepening its arbitration presence throughout Asia-Pacific.
+                            She joined Morag Law Group in 2018 from a leading Singapore-based international practice where she was counsel and later senior counsel. Her appointment to co-lead the Singapore office reflected the firm's commitment to deepening its arbitration presence throughout Asia-Pacific.
                         </p>
                         <p class="text-meston-gray leading-relaxed mb-6">
                             Sarah is admitted to practice in Singapore, Hong Kong, and England and Wales. She has served as president of the Singapore International Arbitration Centre User Council and is a frequent speaker at international arbitration conferences and seminars. She is a Fellow of the Chartered Institute of Arbitrators and sits on the panels of the SIAC, LCIA, and UNCITRAL.
@@ -373,7 +409,7 @@
                 or complete an inquiry through our contact page.
             </p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="mailto:s.chen@mestonlaw.com" class="btn-primary px-10 py-4 text-sm tracking-widest uppercase text-meston-navy font-medium inline-flex items-center gap-2">
+                <a href="mailto:s.chen@moraglawgroup.com" class="btn-primary px-10 py-4 text-sm tracking-widest uppercase text-meston-navy font-medium inline-flex items-center gap-2">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                     </svg>
@@ -396,7 +432,7 @@
                             <span class="font-serif text-meston-gold text-xl font-bold">M</span>
                         </div>
                         <div>
-                            <span class="font-serif text-xl text-white tracking-wide">Meston Law</span>
+                            <span class="font-serif text-xl text-white tracking-wide">Morag Law Group</span>
                             <span class="text-meston-gold text-xs tracking-widest block -mt-1">LLP</span>
                         </div>
                     </div>
@@ -437,7 +473,7 @@
             </div>
             <div class="pt-8 border-t border-meston-gold/10 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p class="text-meston-gray text-xs">
-                    © 2026 Meston Law LLP. All rights reserved. Attorney advertising.
+                    © 2026 Morag Law Group LLP. All rights reserved. Attorney advertising.
                 </p>
                 <div class="flex gap-6">
                     <a href="#" class="text-meston-gray text-xs hover:text-meston-gold transition-colors">Terms of Use</a>
@@ -488,5 +524,6 @@
 
         document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
     </script>
+    <script src="imgs/main.js"></script>
 </body>
 </html>
