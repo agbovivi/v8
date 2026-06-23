@@ -36,5 +36,24 @@
             });
         }
 
+        // 5. Scroll-to-top button behavior
+        const scrollBtn = document.getElementById('scrollToTopBtn');
+        if (scrollBtn) {
+            const toggleScrollBtn = () => {
+                if (window.scrollY > 400) {
+                    scrollBtn.classList.remove('hidden');
+                } else {
+                    scrollBtn.classList.add('hidden');
+                }
+            };
+
+            window.addEventListener('scroll', toggleScrollBtn);
+            scrollBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            toggleScrollBtn();
+        }
+
         console.log("Content Protection Active");
     });
